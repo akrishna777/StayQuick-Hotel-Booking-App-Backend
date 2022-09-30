@@ -1,6 +1,5 @@
 import Hotel from '../Models/Hotel.js'
 import Room from '../Models/Room.js'
-import { createError } from '../Utils/error.js'
 
 export const createHotel = async (req, res, next) => {
   const newHotel = new Hotel(req.body)

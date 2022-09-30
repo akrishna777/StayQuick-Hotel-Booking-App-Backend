@@ -11,8 +11,7 @@ import {
   getHotelRooms,
   updateHotel,
 } from '../Controllers/hotel.js'
-import Hotel from '../Models/Hotel.js'
-import { createError } from '../Utils/error.js'
+
 import { verifyAdmin } from '../Utils/verifyToken.js'
 
 const router = express.Router()
