@@ -23,6 +23,10 @@ app.use('/api/users', usersRoute)
 app.use('/api/hotels', hotelsRoute)
 app.use('/api/rooms', roomsRoute)
 
+app.use('/', (req, res) => {
+  res.send('Welcome to StayQuick API')
+})
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500
   const errorMessage = err.message || 'Something went wrong!'
@@ -32,10 +36,6 @@ app.use((err, req, res, next) => {
     message: errorMessage,
     stack: err.stack,
   })
-})
-
-app.use('/', (req, res) => {
-  res.send('Welcome to StayQuick API')
 })
 
 const PORT = process.env.PORT || 5000
